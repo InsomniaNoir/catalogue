@@ -5,6 +5,7 @@ class VerbiagesController < ApplicationController
   
   def create
     @verbiage = Verbiage.new(verbiage_params)
+    @verbiage.user = current_user
       if @verbiage.save
         flash[:notice] = "New Verbiage has been added!"
         redirect_to @verbiage
