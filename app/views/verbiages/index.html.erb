@@ -1,0 +1,10 @@
+<h1>All Verbiage</h1>
+<% @verbiages.each do |verbiage| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 clas="media-heading">
+        <%= link_to verbiage.title, verbiage %>
+      </h4>
+    </div>      
+  </div>
+<% end %>
