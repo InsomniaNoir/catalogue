@@ -1,3 +1,3 @@
 class Category < ActiveRecord::Base
-  has_many :verbiage
+  has_many :verbiages
 end
