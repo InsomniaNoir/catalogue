@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150805163125) do
+ActiveRecord::Schema.define(version: 20150805163728) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "title"
@@ -22,9 +22,18 @@ ActiveRecord::Schema.define(version: 20150805163125) do
 
   add_index "categories", ["verbiage_id"], name: "index_categories_on_verbiage_id"
 
+  create_table "suggestions", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.boolean  "approved"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "verbiages", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
+    t.boolean  "approved"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
