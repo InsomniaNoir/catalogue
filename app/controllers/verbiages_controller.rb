@@ -1,11 +1,13 @@
 class VerbiagesController < ApplicationController
   def index
     @verbiages = Verbiage.all
+    authorize @verbiage
   end
   
   def create
     @verbiage = Verbiage.new(verbiage_params)
     @verbiage.user = current_user
+    authorize @verbiage
       if @verbiage.save
         flash[:notice] = "New Verbiage has been added!"
         redirect_to @verbiage
@@ -21,14 +23,17 @@ class VerbiagesController < ApplicationController
 
   def new
     @verbiage = Verbiage.new
+    authorize @verbiage
   end
 
   def edit
     @verbiage = Verbiage.find(params[:id])
+    authorize @verbiage
   end
   
   def update
     @verbiage = Verbiage.find(params[:id])
+    authorize @verbiage
     if @verbiage.update_attributes(verbiage_params)
       flash[:notice] = "Verbiage was successfully updated."
       redirect_to @verbiage

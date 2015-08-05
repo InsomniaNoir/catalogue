@@ -1,5 +1,7 @@
 <h1><%= @verbiage.title %></h1>
 
+<% if policy(@verbiage).edit? %>
 <%= link_to "Edit", edit_verbiage_path(@verbiage), class: 'btn btn-success' %>
+<% end %>
 
 <p><%= @verbiage.body %></p>

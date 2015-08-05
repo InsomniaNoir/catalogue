@@ -1,4 +1,7 @@
 <h1>All Verbiage</h1>
+<% if policy(Verbiage.new).create? %>
+<%= link_to "New Verbiage", new_verbiage_path, class: 'btn btn-success' %>
+<% end %>
 <% @verbiages.each do |verbiage| %>
   <div class="media">
     <div class="media-body">
