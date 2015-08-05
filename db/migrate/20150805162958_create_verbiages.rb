@@ -3,6 +3,7 @@ class CreateVerbiages < ActiveRecord::Migration
     create_table :verbiages do |t|
       t.string :title
       t.text :body
+      t.boolean :approved
 
       t.timestamps null: false
     end
