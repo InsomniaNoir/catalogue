@@ -14,6 +14,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# User Authentication through Devise
+gem 'devise'
+
 # Create database data with Faker
 gem 'faker'
 # Use jquery as the JavaScript library
