@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150805185819) do
+ActiveRecord::Schema.define(version: 20150805194509) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "title"
     t.integer  "verbiage_id"
+    t.boolean  "approved"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -58,11 +59,13 @@ ActiveRecord::Schema.define(version: 20150805185819) do
     t.string   "title"
     t.text     "body"
     t.boolean  "approved"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.integer  "category_id"
   end
 
+  add_index "verbiages", ["category_id"], name: "index_verbiages_on_category_id"
   add_index "verbiages", ["user_id"], name: "index_verbiages_on_user_id"
 
 end
