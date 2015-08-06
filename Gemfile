@@ -19,6 +19,7 @@ gem 'devise'
 gem 'pundit'
 gem 'figaro'
 gem 'redcarpet'
+gem 'will_paginate', '~> 3.0.5'
 # Create database data with Faker
 gem 'faker'
 # Use jquery as the JavaScript library
