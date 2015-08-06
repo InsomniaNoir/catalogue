@@ -1,7 +1,14 @@
 <h1><%= @verbiage.title %></h1>
 
-<% if policy(@verbiage).edit? %>
-<%= link_to "Edit", edit_verbiage_path(@verbiage), class: 'btn btn-success' %>
-<% end %>
+<h1><%= @verbiage.title %></h1>
 
-<p><%= @verbiage.body %></p>
+<div class="row">
+  <div class="col-md-8">
+    <p><%= @verbiage.body %></p>
+  </div>
+  <div class="col-md-4">
+    <% if policy(@verbiage).edit? %>
+      <%= link_to "Edit", edit_category_verbiage_path(@category, @verbiage), class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</div>

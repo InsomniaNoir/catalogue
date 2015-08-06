@@ -11,4 +11,4 @@ class CategoryPolicy < ApplicationPolicy
    def update?
      create?
    end
- end
+end

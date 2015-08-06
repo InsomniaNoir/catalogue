@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  resources :verbiages
-  resources :categories
-
+  
+  resources :categories do
+    resources :verbiages, except: [:index]
+  end
+  
   get 'about' => 'welcome#about'
 
   root to: 'welcome#index'

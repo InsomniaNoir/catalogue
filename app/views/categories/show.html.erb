@@ -1,2 +1,26 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<h1>Category Name</h1>
+
+
+<% if Policy(@category).update? %>
+  <%= link_to "Edit Category", edit_category_path, class: 'btn btn-success'%>
+<% end %>
+
+<div class= "row">
+    <div class="col-md-8">
+      <p class="lead"><%= @category.title %></p>
+      <%= @verbiages.each do |verbiage| %>
+        <div class="media">
+          <div class="media-body">
+            <h4 class="media-heading">
+              <%= link_to verbiage.title, verbiage %>
+            </h4>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-4">
+      <% if Policy(Verbiage.new).create? %>
+        <%= link_to "New Verbiage", new_category_verbiage_path(@category), class: 'btn btn-success' %>
+      <% end %>
+    </div>
+</div>

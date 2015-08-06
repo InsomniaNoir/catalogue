@@ -7,10 +7,10 @@
       <div class="media">
         <div class="media-body">
           <h4 class="media-heading">
-            <%= link_to category.name, category %>
+            <%= link_to category.title, [@category, verbiage] %>
           </h4>
           <small>
-            <%= category.description %>
+            Submitted at <%= time_ago_in_words(verbiage.created_at) %> Ago by <%= verbiage.user.name %>
           </small>
         </div>
       </div>
@@ -18,7 +18,7 @@
   </div>
   <div class="col-md-4">
     <% if policy(Category.new).create? %>
-      <%= link_to "New Category", new_category_apth, class: 'btn btn-success' %>
+      <%= link_to "New Category", new_category_path, class: 'btn btn-success' %>
     <% end %>
   </div>
 </div>

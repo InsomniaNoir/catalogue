@@ -11,6 +11,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    @verbiages = @category.verbiages
     authorize @category
   end
 
