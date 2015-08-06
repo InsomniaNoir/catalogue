@@ -1,10 +1,10 @@
-<h1><%= @verbiage.title %></h1>
+<h1><%= markdown_to_html @verbiage.title %></h1>
 
 <h1><%= @verbiage.title %></h1>
 
 <div class="row">
   <div class="col-md-8">
-    <p><%= @verbiage.body %></p>
+    <p><%= markdown_to_html @verbiage.body %></p>
   </div>
   <div class="col-md-4">
     <% if policy(@verbiage).edit? %>
