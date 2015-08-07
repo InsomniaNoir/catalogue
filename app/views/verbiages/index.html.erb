@@ -6,11 +6,8 @@
   <div class="media">
     <div class="media-body">
       <h4 clas="media-heading">
-        <%= link_to verbiage.title, verbiage %>
+        <%= link_to (markdown_to_html verbiage.title), verbiage %>
       </h4>
-      <small>
-        submitted <%= time_ago_in_words(verbiage.created_at) %> ago by <%= verbiage.user.name %><br>
-      </small>
     </div>      
   </div>
 <% end %>

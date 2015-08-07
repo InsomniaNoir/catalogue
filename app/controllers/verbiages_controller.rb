@@ -50,6 +50,19 @@ class VerbiagesController < ApplicationController
     end
   end
   
+  def destroy
+    @category = Category.find(params[:category_id])
+    @verbiage = Verbiage.find(params[:id])
+    
+    if @verbiage.destroy
+      flash[:notice] = "\"#{@verbiage.title}\" has been deleted."
+      redirect_to @category
+    else
+      flash[:error] = "\"#{@verbiage.title}\" could not be deleted. Please try again."
+      render :show
+    end
+  end
+  
   private
   
   # Using Strong Params

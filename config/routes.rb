@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   
   resources :categories do
-    resources :verbiages
+    resources :verbiages, dependent: :destroy
   end
   
   get 'about' => 'welcome#about'
