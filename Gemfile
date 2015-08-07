@@ -20,6 +20,11 @@ gem 'pundit'
 gem 'figaro'
 gem 'redcarpet'
 gem 'will_paginate', '~> 3.0.5'
+
+# Paperclip for file attachmeht: http://www.rubydoc.info/gems/paperclip/4.3.0
+gem 'paperclip', '~> 4.3.0'
+# Zero Clip Board: https://github.com/zeroclipboard/zeroclipboard-rails
+gem 'zeroclipboard-rails'
 # Create database data with Faker
 gem 'faker'
 # Use jquery as the JavaScript library
