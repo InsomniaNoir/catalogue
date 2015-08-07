@@ -1,7 +1,7 @@
 <h1>Category Name</h1>
 
 
-<% if Policy(@category).update? %>
+<% if policy(@category).update? %>
   <%= link_to "Edit Category", edit_category_path, class: 'btn btn-success'%>
 <% end %>
 
@@ -19,7 +19,7 @@
       <% end %>
     </div>
     <div class="col-md-4">
-      <% if Policy(Verbiage.new).create? %>
+      <% if policy(Verbiage.new).create? %>
         <%= link_to "New Verbiage", new_category_verbiage_path(@category), class: 'btn btn-success' %>
       <% end %>
     </div>

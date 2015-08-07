@@ -7,11 +7,8 @@
       <div class="media">
         <div class="media-body">
           <h4 class="media-heading">
-            <%= link_to category.title, [@category, verbiage] %>
+            <%= link_to category.title, [category, @verbiage] %>
           </h4>
-          <small>
-            Submitted at <%= time_ago_in_words(verbiage.created_at) %> Ago by <%= verbiage.user.name %>
-          </small>
         </div>
       </div>
     <% end %>
