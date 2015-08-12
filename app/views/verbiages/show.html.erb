@@ -1,10 +1,26 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    var clip = new ZeroClipboard.Client();
+    clip.setText('');
+    
+    clip.addEventListener('mouseDown'), function(client) {
+     clip.setText(jQuery("#text-copy").val()); 
+    });
+    clip.glue("#copy-to-clipboard");
+  });
+
+</script>
+
 <h1><%= markdown_to_html @verbiage.title %></h1>
 
 <div class="row">
   <div class="col-md-8">
-    <p><%= markdown_to_html @verbiage.body %></p>
+    <p id="text-copy"><%= markdown_to_html @verbiage.body %></p>
+    </div>
   </div>
+  
   <div class="col-md-4">
+    <button id="copy-to-clipboard" class='btn btn-info'>Copy!</button>
     <% if policy(@verbiage).edit? %>
       <%= link_to "Edit", edit_category_verbiage_path(@category, @verbiage), class: 'btn btn-success' %>
     <% end %>
@@ -14,3 +30,4 @@
     <% end %>
   </div>
 </div>
+
