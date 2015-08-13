@@ -23,9 +23,6 @@ gem 'will_paginate', '~> 3.0.5'
 
 # Paperclip for file attachmeht: http://www.rubydoc.info/gems/paperclip/4.3.0
 gem 'paperclip', '~> 4.3.0'
-# Zeroclipboard - Javascript to copy text from DOM: https://github.com/zeroclipboard/zeroclipboard-rails
-# Explanation/Documentation: http://www.seijinaganuma.com/2015/06/js-copy-to-clipboard-button/
-gem 'zeroclipboard-rails'
 # Create database data with Faker
 gem 'faker'
 # Use jquery as the JavaScript library
