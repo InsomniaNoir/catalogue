@@ -6,8 +6,8 @@
 <% end %>
 
 <div class= "row">
-    <div class="col-md-8">
-      <%= @verbiages.each do |verbiage| %>
+    <% @verbiages.each do |verbiage| %>
+      <div class="col-md-8">
         <div class="media">
           <div class="media-body">
             <h4 class="media-heading">
@@ -15,8 +15,8 @@
             </h4>
           </div>
         </div>
-      <% end %>
-    </div>
+      </div>
+     <% end %>
     <div class="col-md-4">
       <% if policy(Verbiage.new).create? %>
         <%= link_to "New Verbiage", new_category_verbiage_path(@category), class: 'btn btn-success' %>
