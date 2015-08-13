@@ -1,0 +1,301 @@
+
+---
+categories:
+  columns:
+  - id
+  - title
+  - verbiage_id
+  - approved
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Benefits
+    - 
+    - true
+    - '2015-08-07 21:08:30.309129'
+    - '2015-08-07 21:08:30.309129'
+  - - 2
+    - Customer Service
+    - 
+    - true
+    - '2015-08-07 21:08:47.120944'
+    - '2015-08-07 21:08:47.120944'
+  - - 3
+    - Coverage Stages
+    - 
+    - true
+    - '2015-08-07 21:09:10.439847'
+    - '2015-08-07 21:14:31.819174'
+  - - 4
+    - PrimeMail©
+    - 
+    - true
+    - '2015-08-07 21:16:35.294186'
+    - '2015-08-07 21:16:35.294186'
+  - - 5
+    - 2015 Florida Blue
+    - 
+    - true
+    - '2015-08-07 21:16:50.786932'
+    - '2015-08-07 21:16:50.786932'
+  - - 6
+    - Horizon Blue Cross Blue Shield NJ
+    - 
+    - true
+    - '2015-08-07 21:18:04.510919'
+    - '2015-08-07 21:18:04.510919'
+  - - 7
+    - DO NOT USE
+    - 
+    - true
+    - '2015-08-07 21:18:22.721385'
+    - '2015-08-07 21:18:22.721385'
+
+---
+users:
+  columns:
+  - id
+  - name
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - confirmation_token
+  - confirmed_at
+  - confirmation_sent_at
+  - unconfirmed_email
+  - created_at
+  - updated_at
+  - role
+  records: 
+  - - 1
+    - Admin User
+    - admin@example.com
+    - "$2a$10$cOSO1evIpjQiTex89J7lUuz9it3yPqPhOyS4pyg.R1uRI5t.yNB9u"
+    - 
+    - 
+    - 
+    - 4
+    - '2015-08-13 19:18:25.183343'
+    - '2015-08-12 17:24:44.102169'
+    - 208.90.129.99
+    - 208.90.129.99
+    - 
+    - '2015-08-07 21:07:45.829210'
+    - 
+    - 
+    - '2015-08-07 21:07:45.842258'
+    - '2015-08-13 19:18:25.185150'
+    - admin
+  - - 2
+    - Moderator User
+    - moderator@example.com
+    - "$2a$10$OLXLjEpscaJLhkW2wecxnel3LwVvsf0nvakzusIRfBZQqSML/Gk62"
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2015-08-07 21:07:45.923779'
+    - 
+    - 
+    - '2015-08-07 21:07:45.925668'
+    - '2015-08-07 21:07:45.925668'
+    - moderator
+  - - 3
+    - Member User
+    - member@example.com
+    - "$2a$10$Q7.21kl6VZlCQrysuK4/DeiULYxfqxBErJMBt.F4ioet61x18m38."
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2015-08-07 21:07:46.004095'
+    - 
+    - 
+    - '2015-08-07 21:07:46.006124'
+    - '2015-08-07 21:07:46.006124'
+    - 
+
+---
+verbiages:
+  columns:
+  - id
+  - title
+  - body
+  - approved
+  - created_at
+  - updated_at
+  - user_id
+  - category_id
+  records: 
+  - - 2
+    - Prior Authorization
+    - Florida Blue requires you or your physician to get Prior Authorization for certain
+      drugs. This means if you do not get an approval from us prior to filling your
+      prescription, we may not cover the drug.
+    - false
+    - '2015-08-07 21:40:16.302725'
+    - '2015-08-07 21:40:16.302725'
+    - 1
+    - 1
+  - - 3
+    - Quantity Limits
+    - For certain drugs, there are limits to the amount of the drug Florida Blue will
+      cover. We may limit how many refills you can get or how much of a drug you can
+      get each time you fill your prescription.
+    - false
+    - '2015-08-07 21:40:47.950328'
+    - '2015-08-07 21:40:47.950328'
+    - 1
+    - 1
+  - - 4
+    - Step Therapy
+    - In some cases, Florida Blue requires you to try certain drugs before we will
+      cover another drug for that condition. For example, if Drug A and Drug B both
+      treat your medical condition, our plan may not cover Drug B unless you try Drug
+      A first. If Drug A does not work for you, our plan will then cover Drug B.
+    - false
+    - '2015-08-07 21:41:39.871853'
+    - '2015-08-07 21:41:39.871853'
+    - 1
+    - 1
+  - - 5
+    - Formulary Exception
+    - "Asking for coverage of a drug that is not on the Drug List is called asking
+      for a “Formulary Exception\". If an exception is approved to cover a drug that
+      is not on the Drug List, you will pay the copay amount that applies to drugs
+      in Tier 4/Non-Preferred Brand `<or other Tier listed in the BET>` Drugs. You
+      cannot ask for an exception to the copayment or coinsurance amount we require
+      you to pay for the drug.\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n"
+    - false
+    - '2015-08-13 19:19:56.884536'
+    - '2015-08-13 19:22:07.417488'
+    - 1
+    - 1
+  - - 6
+    - Tier Exception
+    - Asking to pay a lower preferred price for a covered non-preferred drug is sometimes
+      called asking for a “Tier Exception". If your drug is a ```<Tier 4/Non-Preferred
+      Brand Drug or Tier 2/Non-Preferred Generic Drug>```, you can ask for it to be
+      covered at the cost-sharing amount that applies to drugs in ```<Tier 3/Preferred
+      Brand Drugs or Tier 1/Preferred Generic Drugs>```. This would lower your share
+      of the cost for the drug. You cannot ask for a change in the cost-sharing tier
+      for any drug in Tier 5/Specialty Drugs.
+    - false
+    - '2015-08-13 19:20:25.475699'
+    - '2015-08-13 19:21:35.630376'
+    - 1
+    - 1
+  - - 7
+    - Cost of Meds
+    - We encourage you to confirm the cost for your drugs prior to placing an order
+      with PrimeMail® or filling a prescription at a retail pharmacy. If you would
+      like to know if a drug is covered or determine pricing, you can contact a Member
+      Service Agent at the number provided on the back of your insurance card. A Member
+      Service Agent can help you find the copay for each of your prescriptions using
+      pharmacies of your choice. You may also obtain price estimates for drugs on
+      the web at www.bluemedicarefl.com. *Please Note* Price estimates are based on
+      your benefits and can vary depending on the quantity dispensed and how the prescription
+      is written. You can also refer to your Drug List booklet for copay information.
+    - false
+    - '2015-08-13 19:23:29.321682'
+    - '2015-08-13 19:23:29.321682'
+    - 1
+    - 1
+  - - 8
+    - Alternate Pharamcies
+    - If you are still unsatisfied with the service provided by XYZ Pharmacy,  other
+      network pharmacies available for use near your home include XYZ, XYZ, and XYZ.  You
+      can find additional network pharmacies by calling the number on the back of
+      your card or by accessing the provider directory on www.BlueMedicareFL.com.
+    - false
+    - '2015-08-13 19:24:17.295464'
+    - '2015-08-13 19:24:17.295464'
+    - 1
+    - 2
+  - - 9
+    - Deductible
+    - "The Deductible Stage is the first stage for your drug coverage. The deductible
+      is the amount you must pay for your prescription drugs before your plan begins
+      to pay its share. It begins when you `<fill your first prescription for the
+      year>` `<fill your first prescription that is a [Indicate Applicable Tiers]>`
+      . You will pay the full cost of your drugs until you pay the plan's deductible
+      amount, which is $***.** for `<plan year>`. Once the deductible is paid you
+      will move into the Initial Coverage Stage\t"
+    - false
+    - '2015-08-13 19:25:12.737984'
+    - '2015-08-13 19:25:12.737984'
+    - 1
+    - 3
+  - - 10
+    - Transit Times
+    - The transit time for your PrimeMail order may vary based on how the order was
+      shipped and your location. PrimeMail uses the United States Postal Service and
+      the United Parcel Service for its shipments. Once the order is shipped, a tracking
+      number should be available. You can check your order status at MyPrimeMail.com
+      or by contacting Member Services at the number provided on the back of your
+      insurance card.
+    - false
+    - '2015-08-13 19:25:38.117788'
+    - '2015-08-13 19:25:38.117788'
+    - 1
+    - 4
+  - - 11
+    - Plan Cost Increase
+    - Every year, Florida Blue examines our BlueMedicare benefit products. To stay
+      competitive in the market place based on the benefits provided, we adjust our
+      cost share and/or premium amounts. These changes are determined through an annual
+      approval process with the government.
+    - false
+    - '2015-08-13 19:26:07.855012'
+    - '2015-08-13 19:26:07.855012'
+    - 1
+    - 5
+  - - 12
+    - Employer Group Waiver Program (EGWP)
+    - "\"According to your 2014 benefits, you were enrolled in a special Medicare-based
+      program called an Employer Group Waiver Plan (EGWP). In 2014, your Employer
+      Group Waiver Plan (EGWP) cost share (flat copay) was compared to a typical Medicare
+      Part D plan cost share (25% co-insurance of the approved drug cost). The lower
+      cost share amount between the two amounts was what you paid. This means the
+      amount you paid in 2014 for prescription claims may have been lower than the
+      flat copays selected by your Employer Group. That changed in 2015. \r\n\r\nEffective
+      1/1/2015, your EGWP plan does not compare to a typical Medicare Part D plan.
+      This means the amount you will pay in 2015 for prescription claims will be the
+      flat copays selected by your Employer Group, which may be a higher amount than
+      what you paid in 2014. You will never pay more than the total approved cost
+      for a covered drug processed through insurance. If the total approved cost of
+      a drug is less than your copay while in the Initial Coverage Stage, you will
+      pay the total approved cost of the drug.\""
+    - false
+    - '2015-08-13 19:26:51.481023'
+    - '2015-08-13 19:26:51.481023'
+    - 1
+    - 6
+  - - 13
+    - Customer Service Training
+    - "(Pharmacy Name) staff has completed the required training to ensure the member
+      is provided with the expected customer service. According to (Pharmacy), the
+      member’s Quality of Care concerns will be addressed internally."
+    - false
+    - '2015-08-13 19:27:27.135921'
+    - '2015-08-13 19:27:27.135921'
+    - 1
+    - 7

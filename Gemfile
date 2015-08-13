@@ -20,6 +20,7 @@ gem 'pundit'
 gem 'figaro'
 gem 'redcarpet'
 gem 'will_paginate', '~> 3.0.5'
+gem 'yaml_db'
 
 # Paperclip for file attachmeht: http://www.rubydoc.info/gems/paperclip/4.3.0
 gem 'paperclip', '~> 4.3.0'
